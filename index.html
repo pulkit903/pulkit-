@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .line {
+      height: 0;
+      width: 4px;
+      background: orange;
+      animation: growLine 2s ease-out forwards;
+    }
+
+    @keyframes growLine {
+      to { height: 120px; }
+    }
+
+    .flower {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      margin-top: -20px;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 2s forwards;
+    }
+
+    .petal {
+      position: absolute;
+      width: 60px;
+      height: 30px;
+      border-radius: 50% 50% 0 0;
+      transform-origin: bottom center;
+      background: purple;
+      animation: changeColor 1s ease-in 4s forwards;
+    }
+
+    .petal:nth-child(even) { background: blue; }
+    .p1 { transform: rotate(0deg) translateY(-70px); }
+    .p2 { transform: rotate(45deg) translateY(-70px); }
+    .p3 { transform: rotate(90deg) translateY(-70px); }
+    .p4 { transform: rotate(135deg) translateY(-70px); }
+    .p5 { transform: rotate(180deg) translateY(-70px); }
+    .p6 { transform: rotate(225deg) translateY(-70px); }
+    .p7 { transform: rotate(270deg) translateY(-70px); }
+    .p8 { transform: rotate(315deg) translateY(-70px); }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      background: orange;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes changeColor {
+      to { background: orange; }
+    }
+
+    .text {
+      color: orange;
+      font-size: 32px;
+      margin-top: 60px;
+      opacity: 0;
+      animation: cinematicText 2s ease-in-out 5s forwards;
+      letter-spacing: 3px;
+    }
+
+    @keyframes cinematicText {
+      0% { opacity: 0; transform: scale(1.4); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    footer {
+      margin-top: 80px;
+      text-align: center;
+      font-size: 14px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="line"></div>
+
+    <div class="flower">
+      <div class="petal p1"></div>
+      <div class="petal p2"></div>
+      <div class="petal p3"></div>
+      <div class="petal p4"></div>
+      <div class="petal p5"></div>
+      <div class="petal p6"></div>
+      <div class="petal p7"></div>
+      <div class="petal p8"></div>
+      <div class="center"></div>
+    </div>
+
+    <div class="text">Change is coming</div>
+  </header>
+
+  <footer>© 2025 YourName. All rights reserved.</footer>
+</body>
+</html>
